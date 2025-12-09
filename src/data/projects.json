@@ -1,0 +1,41 @@
+[
+  {
+    "id": "project-1",
+    "title": "ECサイトプラットフォーム",
+    "description": "Stripe決済連携を含むフルスタックECサイト",
+    "longDescription": "1万人以上のユーザーを扱うECプラットフォームを構築しました。決済処理、在庫管理、注文追跡などの機能を実装しています。",
+    "thumbnail": "/images/projects/ecommerce-thumb.png",
+    "images": ["/images/projects/ecommerce-1.png", "/images/projects/ecommerce-2.png"],
+    "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "AWS"],
+    "githubUrl": "https://github.com/yourusername/ecommerce",
+    "liveUrl": "https://example.com",
+    "featured": true,
+    "completedDate": "2024-03",
+    "metrics": {
+      "users": "10,000+",
+      "performance": "95+ Lighthouse",
+      "uptime": "99.9%"
+    }
+  },
+  {
+    "id": "project-2",
+    "title": "タスク管理アプリ",
+    "description": "チーム向けのリアルタイム協業タスク管理ツール",
+    "longDescription": "リアルタイムでタスクの進捗を共有できるチーム向けアプリケーションです。WebSocketを使用したリアルタイム更新機能を実装しています。",
+    "thumbnail": "/images/projects/taskapp-thumb.png",
+    "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
+    "githubUrl": "https://github.com/yourusername/task-app",
+    "featured": true,
+    "completedDate": "2024-01"
+  },
+  {
+    "id": "project-3",
+    "title": "ポートフォリオビルダー",
+    "description": "開発者向けポートフォリオ自動生成ツール",
+    "thumbnail": "/images/projects/portfolio-builder-thumb.png",
+    "technologies": ["Next.js", "TypeScript", "GitHub API"],
+    "githubUrl": "https://github.com/yourusername/portfolio-builder",
+    "featured": false,
+    "completedDate": "2023-12"
+  }
+]

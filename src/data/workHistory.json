@@ -1,0 +1,47 @@
+[
+  {
+    "id": "work-1",
+    "company": "テックスタートアップ株式会社",
+    "position": "シニアフルスタック開発者",
+    "period": { "start": "2022-04", "end": "present" },
+    "location": "リモート",
+    "description": "SaaSプロダクトのコア機能開発をリードし、フロントエンドからバックエンドまで幅広く担当",
+    "achievements": [
+      "ページ読み込み速度を40%改善し、ユーザー体験を大幅に向上",
+      "3名のジュニア開発者のメンタリング",
+      "CI/CDパイプライン構築によりデプロイ時間を60%短縮",
+      "月間アクティブユーザー数を5万人から10万人に増加"
+    ],
+    "technologies": ["Next.js", "TypeScript", "PostgreSQL", "AWS", "Docker"]
+  },
+  {
+    "id": "work-2",
+    "company": "Web制作会社",
+    "position": "フロントエンド開発者",
+    "period": { "start": "2020-04", "end": "2022-03" },
+    "location": "東京",
+    "description": "クライアントのWebサイトやアプリケーション開発を担当",
+    "achievements": [
+      "30以上のプロジェクトを納期通りに完了",
+      "Reactベースのコンポーネントライブラリを構築し、開発効率を30%向上",
+      "レスポンシブデザインのベストプラクティスをチームに導入",
+      "クライアント満足度90%以上を維持"
+    ],
+    "technologies": ["React", "JavaScript", "HTML/CSS", "Sass", "Git"]
+  },
+  {
+    "id": "work-3",
+    "company": "フリーランス",
+    "position": "Webデベロッパー",
+    "period": { "start": "2019-01", "end": "2020-03" },
+    "location": "リモート",
+    "description": "中小企業向けのWebサイト制作とWordPressカスタマイズ",
+    "achievements": [
+      "15社以上のクライアントと取引",
+      "WordPress高速化プラグインを開発し、ページ速度を平均50%改善",
+      "SEO最適化により検索順位を平均20位向上",
+      "全てのプロジェクトでクライアントから5つ星評価を獲得"
+    ],
+    "technologies": ["WordPress", "PHP", "JavaScript", "MySQL"]
+  }
+]

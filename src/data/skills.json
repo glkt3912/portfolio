@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "name": "Frontend",
+      "skills": [
+        { "name": "React", "level": 5, "yearsExp": 4 },
+        { "name": "Next.js", "level": 5, "yearsExp": 3 },
+        { "name": "TypeScript", "level": 5, "yearsExp": 3 },
+        { "name": "JavaScript", "level": 5, "yearsExp": 5 },
+        { "name": "HTML/CSS", "level": 5, "yearsExp": 5 },
+        { "name": "Tailwind CSS", "level": 5, "yearsExp": 2 },
+        { "name": "Vue.js", "level": 3, "yearsExp": 1 }
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        { "name": "Node.js", "level": 4, "yearsExp": 3 },
+        { "name": "Express", "level": 4, "yearsExp": 3 },
+        { "name": "PostgreSQL", "level": 4, "yearsExp": 3 },
+        { "name": "MongoDB", "level": 3, "yearsExp": 2 },
+        { "name": "REST API", "level": 5, "yearsExp": 4 },
+        { "name": "GraphQL", "level": 3, "yearsExp": 1 }
+      ]
+    },
+    {
+      "name": "DevOps & Tools",
+      "skills": [
+        { "name": "Git", "level": 5, "yearsExp": 5 },
+        { "name": "Docker", "level": 4, "yearsExp": 2 },
+        { "name": "AWS", "level": 3, "yearsExp": 2 },
+        { "name": "Vercel", "level": 5, "yearsExp": 2 },
+        { "name": "GitHub Actions", "level": 4, "yearsExp": 2 },
+        { "name": "Linux", "level": 4, "yearsExp": 3 }
+      ]
+    },
+    {
+      "name": "その他",
+      "skills": [
+        { "name": "Figma", "level": 3, "yearsExp": 2 },
+        { "name": "Jest", "level": 4, "yearsExp": 2 },
+        { "name": "Cypress", "level": 3, "yearsExp": 1 },
+        { "name": "Prisma", "level": 4, "yearsExp": 2 }
+      ]
+    }
+  ]
+}
