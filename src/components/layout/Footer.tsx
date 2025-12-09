@@ -12,7 +12,7 @@ export default function Footer() {
             href="https://github.com/glkt3912"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-accent-500 transition-colors"
+            className="text-gray-900 dark:text-white hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
             aria-label="GitHub"
           >
             <IconBrandGithub size={24} />
@@ -21,20 +21,20 @@ export default function Footer() {
             href="https://linkedin.com/in/glkt3912"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-accent-500 transition-colors"
+            className="text-gray-900 dark:text-white hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
             aria-label="LinkedIn"
           >
             <IconBrandLinkedin size={24} />
           </a>
           <a
             href="mailto:contact@example.com"
-            className="hover:text-accent-500 transition-colors"
+            className="text-gray-900 dark:text-white hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
             aria-label="Email"
           >
             <IconMail size={24} />
           </a>
         </Group>
-        <Text size="sm" c="dimmed">
+        <Text size="sm" className="text-gray-900 dark:text-gray-100 font-semibold">
           © {currentYear} Portfolio. All rights reserved.
         </Text>
       </div>

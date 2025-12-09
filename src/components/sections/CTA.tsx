@@ -13,10 +13,7 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className="section-padding relative overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-      }}
+      className="section-padding relative overflow-hidden bg-gradient-to-br from-gray-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800"
     >
       {/* Subtle Dot Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
@@ -29,9 +26,9 @@ export default function CTA() {
       </div>
 
       {/* Subtle Accent Shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
         <motion.div
-          className="absolute top-20 right-20 w-32 h-32 bg-accent-400 rounded-xl"
+          className="absolute top-20 right-20 w-32 h-32 bg-accent-300 dark:bg-accent-400 rounded-xl"
           animate={{
             rotate: [0, 180, 360],
           }}
@@ -41,7 +38,7 @@ export default function CTA() {
             ease: 'linear',
           }}
         />
-        <div className="absolute bottom-20 left-20 w-24 h-24 bg-amber-400 rounded-lg" />
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-amber-300 dark:bg-amber-400 rounded-lg" />
       </div>
 
       {/* Content */}
@@ -61,7 +58,7 @@ export default function CTA() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-6"
           >
-            <span className="inline-block px-4 py-2 border border-accent-400 rounded-md text-accent-300 text-sm font-semibold uppercase tracking-wider">
+            <span className="inline-block px-4 py-2 border border-accent-500 dark:border-accent-400 rounded-md text-accent-600 dark:text-accent-300 text-sm font-semibold uppercase tracking-wider">
               プロジェクトをお探しですか？
             </span>
           </motion.div>
@@ -75,7 +72,7 @@ export default function CTA() {
           >
             <Title
               order={2}
-              className="font-display text-4xl md:text-6xl font-bold text-primary-50 mb-6 leading-tight"
+              className="font-display text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6 leading-tight"
             >
               一緒に素晴らしいものを
               <br />
@@ -92,7 +89,7 @@ export default function CTA() {
           >
             <Text
               size="lg"
-              className="text-primary-200 mb-10 leading-relaxed"
+              className="text-gray-700 dark:text-gray-300 mb-10 leading-relaxed"
             >
               あなたのアイデアを実現するお手伝いをします。
               <br className="hidden md:block" />
@@ -122,7 +119,7 @@ export default function CTA() {
                 size="lg"
                 radius="md"
                 variant="outline"
-                className="border-2 border-primary-100 text-primary-50 hover:bg-primary-50 hover:text-primary-900 transition-all duration-200 font-semibold"
+                className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white dark:border-gray-100 dark:text-gray-100 dark:hover:bg-gray-100 dark:hover:text-gray-900 transition-all duration-200 font-semibold"
                 leftSection={<IconBrandGithub size={20} />}
                 component="a"
                 href="https://github.com/glkt3912"
@@ -140,7 +137,7 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-16 pt-12 border-t border-accent-400/30"
+            className="mt-16 pt-12 border-t border-gray-300 dark:border-accent-400/30"
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -157,10 +154,10 @@ export default function CTA() {
                   transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-3xl md:text-5xl font-bold text-accent-400 mb-2">
+                  <div className="text-3xl md:text-5xl font-bold text-accent-600 dark:text-accent-400 mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-primary-300 font-semibold uppercase tracking-wider">{stat.label}</div>
+                  <div className="text-sm text-gray-700 dark:text-gray-300 font-semibold uppercase tracking-wider">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

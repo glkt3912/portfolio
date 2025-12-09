@@ -23,26 +23,26 @@ export default function TimelineItem({ work }: TimelineItemProps) {
       <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-500 dark:bg-blue-400"></div>
 
       <div className="mb-2">
-        <Text fw={600} size="lg">
+        <Text fw={600} size="lg" className="text-neutral-900 dark:text-neutral-100">
           {work.position}
         </Text>
-        <Text fw={500} c="dimmed">
+        <Text fw={500} c="dimmed" className="text-neutral-600 dark:text-neutral-400">
           {work.company}
         </Text>
-        <Text size="sm" c="dimmed">
+        <Text size="sm" c="dimmed" className="text-neutral-600 dark:text-neutral-400">
           {formatPeriod(work.period.start, work.period.end)} • {work.location}
         </Text>
       </div>
 
-      <Text size="sm" className="mb-3">
+      <Text size="sm" className="mb-3 text-neutral-700 dark:text-neutral-300">
         {work.description}
       </Text>
 
       <div className="mb-3">
-        <Text size="sm" fw={500} className="mb-2">
+        <Text size="sm" fw={500} className="mb-2 text-neutral-900 dark:text-neutral-100">
           主な実績:
         </Text>
-        <List size="sm" spacing="xs">
+        <List size="sm" spacing="xs" className="text-neutral-700 dark:text-neutral-300">
           {work.achievements.map((achievement, index) => (
             <List.Item key={index}>{achievement}</List.Item>
           ))}

@@ -13,10 +13,10 @@ export default function Projects({ projects }: ProjectsProps) {
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
-          <Title order={2} size="h2" className="text-3xl md:text-4xl font-bold mb-4">
+          <Title order={2} size="h2" className="text-3xl md:text-4xl font-bold mb-4 text-neutral-900 dark:text-neutral-100">
             プロジェクト
           </Title>
-          <Text size="lg" c="dimmed">
+          <Text size="lg" c="dimmed" className="text-neutral-600 dark:text-neutral-400">
             これまでに手がけた主要なプロジェクトをご紹介します
           </Text>
         </div>

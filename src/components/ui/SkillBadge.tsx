@@ -20,16 +20,16 @@ export default function SkillBadge({ skill, showProgress = true }: SkillBadgePro
   return (
     <div className="w-full">
       <Group justify="apart" mb={4}>
-        <Text size="sm" fw={500}>
+        <Text size="sm" fw={500} className="text-neutral-900 dark:text-neutral-100">
           {skill.name}
         </Text>
         {skill.yearsExp && (
-          <Text size="xs" c="dimmed">
+          <Text size="xs" c="dimmed" className="text-neutral-600 dark:text-neutral-400">
             {skill.yearsExp}年
           </Text>
         )}
       </Group>
-      <Progress value={levelPercentage} size="sm" />
+      <Progress value={levelPercentage} size="sm" color="blue" className="bg-neutral-200 dark:bg-neutral-700" />
     </div>
   );
 }

@@ -13,14 +13,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #f8fafc 0%, #ecfeff 100%)',
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800"
     >
       {/* Subtle Grid Pattern */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-30"
+        className="absolute inset-0 pointer-events-none opacity-30 dark:opacity-20"
         style={{
           backgroundImage: 'linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px)',
           backgroundSize: '24px 24px',
@@ -28,9 +25,9 @@ export default function Hero() {
       />
 
       {/* Subtle Accent Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 dark:opacity-10">
         <motion.div
-          className="absolute top-20 right-20 w-32 h-32 border-2 border-accent-400"
+          className="absolute top-20 right-20 w-32 h-32 border-2 border-accent-400 dark:border-accent-600"
           style={{ borderRadius: '12px' }}
           animate={{
             rotate: [0, 180, 360],
@@ -41,7 +38,7 @@ export default function Hero() {
             ease: 'linear',
           }}
         />
-        <div className="absolute bottom-20 left-20 w-24 h-24 bg-accent-300 rounded-xl" />
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-accent-300 dark:bg-accent-700 rounded-xl" />
       </div>
 
       {/* Content */}
@@ -79,7 +76,7 @@ export default function Hero() {
           >
             <Title
               order={1}
-              className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight text-neutral-900 dark:text-neutral-100"
             >
               <span className="gradient-text">
                 フルスタック開発者
@@ -138,7 +135,7 @@ export default function Hero() {
                 size="lg"
                 radius="md"
                 variant="outline"
-                className="border-2 border-primary-300 text-primary-900 hover:bg-primary-50 hover:border-accent-500 transition-all duration-200"
+                className="border-2 border-primary-300 dark:border-primary-600 text-primary-900 dark:text-primary-100 hover:bg-primary-50 dark:hover:bg-primary-800 hover:border-accent-500 transition-all duration-200"
                 leftSection={<IconBrandGithub size={20} />}
                 component="a"
                 href="https://github.com/glkt3912"
