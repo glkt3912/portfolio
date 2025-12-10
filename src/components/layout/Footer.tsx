@@ -1,5 +1,5 @@
 import { Group, Text } from '@mantine/core';
-import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
+import { IconBrandGithub, IconMail } from '@tabler/icons-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,15 +16,6 @@ export default function Footer() {
             aria-label="GitHub"
           >
             <IconBrandGithub size={24} />
-          </a>
-          <a
-            href="https://linkedin.com/in/glkt3912"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-900 dark:text-white hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
-            aria-label="LinkedIn"
-          >
-            <IconBrandLinkedin size={24} />
           </a>
           <a
             href="mailto:contact@example.com"

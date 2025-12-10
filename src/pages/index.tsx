@@ -1,10 +1,11 @@
 import type { GetStaticProps } from 'next';
 import Layout from '@/components/layout/Layout';
 import Hero from '@/components/sections/Hero';
-import Projects from '@/components/sections/Projects';
-import Skills from '@/components/sections/Skills';
+import WhatICanDo from '@/components/sections/WhatICanDo';
 import WorkHistory from '@/components/sections/WorkHistory';
-import CTA from '@/components/sections/CTA';
+import Skills from '@/components/sections/Skills';
+import Projects from '@/components/sections/Projects';
+import Contact from '@/components/sections/Contact';
 import { Project, SkillCategory, WorkHistory as WorkHistoryType } from '@/types';
 
 // Import data files
@@ -14,7 +15,7 @@ import workHistoryData from '@/data/workHistory.json';
 
 interface HomeProps {
   projects: Project[];
-  skills: SkillCategory[];
+  skills: { categories: SkillCategory[] };
   workHistory: WorkHistoryType[];
 }
 
@@ -22,10 +23,11 @@ export default function Home({ projects, skills, workHistory }: HomeProps) {
   return (
     <Layout>
       <Hero />
-      <Projects projects={projects} />
-      <Skills skills={skills.categories} />
+      <WhatICanDo />
       <WorkHistory history={workHistory} />
-      <CTA />
+      <Skills skills={skills.categories} />
+      <Projects projects={projects} />
+      <Contact />
     </Layout>
   );
 }

@@ -153,7 +153,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
             className="flex flex-col items-center cursor-pointer"
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection('what-i-can-do')}
           >
             <Text size="sm" className="text-neutral-500 dark:text-neutral-400 mb-2">
               スクロールして詳細を見る
