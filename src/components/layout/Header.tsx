@@ -2,6 +2,29 @@ import { useState } from 'react';
 import { Group, Burger } from '@mantine/core';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
+const NAV_ITEMS = [
+  { id: 'what-i-can-do', label: 'What I Can Do' },
+  { id: 'work-history', label: 'Work History' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
+] as const;
+
+interface NavButtonProps {
+  onClick: () => void;
+  children: React.ReactNode;
+  className?: string;
+}
+
+const NavButton = ({ onClick, children, className = '' }: NavButtonProps) => (
+  <button
+    onClick={onClick}
+    className={`px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold ${className}`}
+  >
+    {children}
+  </button>
+);
+
 export default function Header() {
   const [opened, setOpened] = useState(false);
 
@@ -22,21 +45,11 @@ export default function Header() {
           </div>
 
           <Group gap="md" className="hidden md:flex">
-            <button onClick={() => scrollToSection('about')} className="px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-              About
-            </button>
-            <button onClick={() => scrollToSection('projects')} className="px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-              Projects
-            </button>
-            <button onClick={() => scrollToSection('skills')} className="px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-              Skills
-            </button>
-            <button onClick={() => scrollToSection('work-history')} className="px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-              Experience
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-              Contact
-            </button>
+            {NAV_ITEMS.map((item) => (
+              <NavButton key={item.id} onClick={() => scrollToSection(item.id)}>
+                {item.label}
+              </NavButton>
+            ))}
             <ThemeToggle />
           </Group>
 
@@ -50,21 +63,15 @@ export default function Header() {
       {/* Mobile Menu */}
       {opened && (
         <div className="md:hidden absolute top-[70px] left-0 right-0 bg-white dark:bg-gray-950 shadow-soft-lg p-4 flex flex-col gap-4 border-b border-neutral-100 dark:border-gray-800">
-          <button onClick={() => scrollToSection('about')} className="text-left px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-            About
-          </button>
-          <button onClick={() => scrollToSection('projects')} className="text-left px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-            Projects
-          </button>
-          <button onClick={() => scrollToSection('skills')} className="text-left px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-            Skills
-          </button>
-          <button onClick={() => scrollToSection('work-history')} className="text-left px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-            Experience
-          </button>
-          <button onClick={() => scrollToSection('contact')} className="text-left px-4 py-2 rounded-md border-0 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-800 hover:bg-gray-200 hover:text-primary-600 dark:hover:bg-gray-700 dark:hover:text-cyan-400 transition-all font-bold">
-            Contact
-          </button>
+          {NAV_ITEMS.map((item) => (
+            <NavButton
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-left"
+            >
+              {item.label}
+            </NavButton>
+          ))}
         </div>
       )}
     </header>
