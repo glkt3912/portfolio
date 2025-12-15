@@ -4,7 +4,7 @@ import Hero from '@/components/sections/Hero';
 import WhatICanDo from '@/components/sections/WhatICanDo';
 import WorkHistory from '@/components/sections/WorkHistory';
 import Skills from '@/components/sections/Skills';
-import Projects from '@/components/sections/Projects';
+// import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
 import { Project, SkillCategory, WorkHistory as WorkHistoryType } from '@/types';
 
@@ -19,14 +19,14 @@ interface HomeProps {
   workHistory: WorkHistoryType[];
 }
 
-export default function Home({ projects, skills, workHistory }: HomeProps) {
+export default function Home({ skills, workHistory }: HomeProps) {
   return (
     <Layout>
       <Hero />
       <WhatICanDo />
       <WorkHistory history={workHistory} />
       <Skills skills={skills.categories} />
-      <Projects projects={projects} />
+      {/* <Projects projects={projects} /> */}
       <Contact />
     </Layout>
   );
