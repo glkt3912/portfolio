@@ -8,7 +8,7 @@ interface SkillsProps {
 
 export default function Skills({ skills }: SkillsProps) {
   return (
-    <section id="skills" className={SECTION_STYLES.padding.light}>
+    <section id="skills" className={SECTION_STYLES.padding.medium}>
       <div className={SECTION_STYLES.container}>
         <Title order={2} className={SECTION_STYLES.title}>
           技術スタック

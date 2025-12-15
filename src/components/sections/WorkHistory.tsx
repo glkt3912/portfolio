@@ -9,7 +9,7 @@ interface WorkHistoryProps {
 
 export default function WorkHistory({ history }: WorkHistoryProps) {
   return (
-    <section id="work-history" className={SECTION_STYLES.padding.dark}>
+    <section id="work-history" className={SECTION_STYLES.padding.medium}>
       <div className={SECTION_STYLES.container}>
         <Title order={2} className={SECTION_STYLES.title}>
           職務経歴
