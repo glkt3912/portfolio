@@ -1,4 +1,4 @@
-import { Title, Text, Button, Group, Badge } from '@mantine/core';
+import { Title, Text, Button, Group } from '@mantine/core';
 import { IconBrandGithub, IconMail, IconArrowDown } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 
@@ -51,21 +51,17 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="flex justify-center mb-6"
           >
-            <Badge
-              size="lg"
-              variant="light"
-              color="primary"
-              className="px-4 py-3 text-sm font-medium"
-            >
+            <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-green-100 dark:bg-green-900/30 border-2 border-green-500 dark:border-green-400">
               <motion.div
-                className="flex items-center gap-2"
-                animate={{ scale: [1, 1.05, 1] }}
+                animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <span className="w-2 h-2 bg-accent-500 rounded-full animate-pulse-soft" />
-                フリーランス募集中
+                <span className="w-2.5 h-2.5 bg-green-500 dark:bg-green-400 rounded-full block" />
               </motion.div>
-            </Badge>
+              <span className="text-sm font-semibold text-green-700 dark:text-green-300">
+                案件募集中
+              </span>
+            </div>
           </motion.div>
 
           {/* Main Heading */}
@@ -76,10 +72,12 @@ export default function Hero() {
           >
             <Title
               order={1}
-              className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight text-neutral-900 dark:text-neutral-100"
+              className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight text-neutral-900 dark:text-neutral-100"
             >
               <span className="gradient-text">
-                フルスタック開発者
+                成果にコミットする
+                <br className="hidden md:block" />
+                バックエンドエンジニア
               </span>
             </Title>
           </motion.div>
@@ -92,11 +90,11 @@ export default function Hero() {
           >
             <Text
               size="xl"
-              className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-2xl mx-auto"
+              className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-3xl mx-auto font-semibold"
             >
-              Next.js、TypeScript、モダンWeb技術を専門とする
+              デプロイ時間83%削減、離脱率20%削減、API呼び出し66%削減
               <br className="hidden md:block" />
-              経験豊富な開発者です
+              NestJS × GCP × AI統合で4年8ヶ月の実績
             </Text>
           </motion.div>
 
@@ -108,10 +106,10 @@ export default function Hero() {
           >
             <Text
               size="md"
-              className="mb-10 text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto"
+              className="mb-10 text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto"
             >
-              高品質なWebアプリケーション開発をお手伝いします。
-              クライアントのビジョンを技術で実現します。
+              マイクロサービス設計、AI機能統合、DevOpsまで幅広く対応。
+              定量的な成果を出すことにこだわり、データドリブンで課題を解決します。
             </Text>
           </motion.div>
 

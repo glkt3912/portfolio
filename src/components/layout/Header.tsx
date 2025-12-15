@@ -6,7 +6,6 @@ const NAV_ITEMS = [
   { id: 'what-i-can-do', label: 'What I Can Do' },
   { id: 'work-history', label: 'Work History' },
   { id: 'skills', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ] as const;
 
@@ -44,16 +43,20 @@ export default function Header() {
             Portfolio
           </div>
 
+          {/* Desktop Navigation */}
           <Group gap="md" className="hidden md:flex">
             {NAV_ITEMS.map((item) => (
               <NavButton key={item.id} onClick={() => scrollToSection(item.id)}>
                 {item.label}
               </NavButton>
             ))}
-            <ThemeToggle />
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
           </Group>
 
-          <div className="md:hidden flex items-center gap-2">
+          {/* Mobile Actions */}
+          <div className="flex md:hidden items-center gap-2">
             <ThemeToggle />
             <Burger opened={opened} onClick={() => setOpened((o) => !o)} />
           </div>
