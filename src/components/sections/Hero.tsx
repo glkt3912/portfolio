@@ -82,34 +82,19 @@ export default function Hero() {
             </Title>
           </motion.div>
 
-          {/* Subtitle */}
+          {/* Description */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Text
-              size="xl"
-              className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-3xl mx-auto font-semibold"
-            >
-              デプロイ時間83%削減、離脱率20%削減、API呼び出し66%削減
-              <br className="hidden md:block" />
-              NestJS × GCP × AI統合で4年8ヶ月の実績
-            </Text>
-          </motion.div>
-
-          {/* Description */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <Text
-              size="md"
-              className="mb-10 text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto"
+              size="lg"
+              className="mb-10 text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed"
             >
               マイクロサービス設計、AI機能統合、DevOpsまで幅広く対応。
-              定量的な成果を出すことにこだわり、データドリブンで課題を解決します。
+              <br className="hidden md:block" />
+              要件定義、設計、実装、運用改善まで一貫して対応します。
             </Text>
           </motion.div>
 
