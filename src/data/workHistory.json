@@ -1,47 +1,54 @@
 [
   {
     "id": "work-1",
-    "company": "テックスタートアップ株式会社",
-    "position": "シニアフルスタック開発者",
-    "period": { "start": "2022-04", "end": "present" },
+    "company": "株式会社manabo",
+    "position": "バックエンドエンジニア / DevOpsエンジニア",
+    "period": { "start": "2024-07", "end": "present" },
     "location": "リモート",
-    "description": "SaaSプロダクトのコア機能開発をリードし、フロントエンドからバックエンドまで幅広く担当",
+    "description": "EdTech企業にて、マイクロサービスアーキテクチャの設計・実装、AI機能統合、インフラストラクチャのコード化を担当",
     "achievements": [
-      "ページ読み込み速度を40%改善し、ユーザー体験を大幅に向上",
-      "3名のジュニア開発者のメンタリング",
-      "CI/CDパイプライン構築によりデプロイ時間を60%短縮",
-      "月間アクティブユーザー数を5万人から10万人に増加"
+      "AI学習支援の会話履歴機能をフルサイクルで開発。ステークホルダーヒアリングから要件定義、仕様書作成、DB/API設計、実装まで一貫して担当。カーソルベースページネーションやGCS統合により、フロントエンド実装負担70%削減、API呼び出し66%削減（4,373行、165テスト）",
+      "技術スタック統一プロジェクトにおいて、ScalaからTypeScript（NestJS）への段階的マイグレーションを推進。API Gateway統合、ルーティング設計、本番環境への無停止移行を実現",
+      "FaaSバッチ処理基盤を0→1で立ち上げ、デプロイ時間を83%削減（30分→5分）",
+      "Helmet.js、Throttler等のセキュリティライブラリを導入し、XSS・CSRF・レート制限対策を実装",
+      "CIテスト自動化とカバレッジ管理により、レビュー時間を90%削減",
+      "マイクロサービス2つを0→1で構築（16,194行 + 29,392行の実装）"
     ],
-    "technologies": ["Next.js", "TypeScript", "PostgreSQL", "AWS", "Docker"]
+    "technologies": [
+      "TypeScript",
+      "NestJS",
+      "Prisma",
+      "Google Cloud Platform",
+      "Cloud Run",
+      "Terraform",
+      "GitHub Actions",
+      "OpenAI GPT-4o/5",
+      "Gemini",
+      "MySQL"
+    ]
   },
   {
     "id": "work-2",
-    "company": "Web制作会社",
-    "position": "フロントエンド開発者",
-    "period": { "start": "2020-04", "end": "2022-03" },
-    "location": "東京",
-    "description": "クライアントのWebサイトやアプリケーション開発を担当",
+    "company": "株式会社acript",
+    "position": "バックエンドエンジニア",
+    "period": { "start": "2021-03", "end": "2024-05" },
+    "location": "群馬",
+    "description": "求人広告業界にて、自社ATSサイト「えんと〜り」および求人紹介サイト「ジャーナルコネクト Navi」の開発を担当",
     "achievements": [
-      "30以上のプロジェクトを納期通りに完了",
-      "Reactベースのコンポーネントライブラリを構築し、開発効率を30%向上",
-      "レスポンシブデザインのベストプラクティスをチームに導入",
-      "クライアント満足度90%以上を維持"
+      "チュートリアル機能実装により離脱率20%削減、応募率10%向上、サポート問い合わせ40%削減",
+      "テスト駆動開発を推進し、チーム全体の不具合発生率・修正時間を20%削減、カバレッジ0%→72%を達成",
+      "PHP 7.4 → 8.2 メジャーバージョンアップグレード（約600箇所修正）をゼロダウンタイムで完遂",
+      "APIレスポンス時間を平均15%短縮、メモリ使用量を10%削減"
     ],
-    "technologies": ["React", "JavaScript", "HTML/CSS", "Sass", "Git"]
-  },
-  {
-    "id": "work-3",
-    "company": "フリーランス",
-    "position": "Webデベロッパー",
-    "period": { "start": "2019-01", "end": "2020-03" },
-    "location": "リモート",
-    "description": "中小企業向けのWebサイト制作とWordPressカスタマイズ",
-    "achievements": [
-      "15社以上のクライアントと取引",
-      "WordPress高速化プラグインを開発し、ページ速度を平均50%改善",
-      "SEO最適化により検索順位を平均20位向上",
-      "全てのプロジェクトでクライアントから5つ星評価を獲得"
-    ],
-    "technologies": ["WordPress", "PHP", "JavaScript", "MySQL"]
+    "technologies": [
+      "PHP 8.2",
+      "Kohana Framework",
+      "jQuery",
+      "Vue.js 2",
+      "Docker",
+      "Jenkins",
+      "MySQL",
+      "PHPUnit"
+    ]
   }
 ]

@@ -1,41 +1,131 @@
 [
   {
     "id": "project-1",
-    "title": "ECサイトプラットフォーム",
-    "description": "Stripe決済連携を含むフルスタックECサイト",
-    "longDescription": "1万人以上のユーザーを扱うECプラットフォームを構築しました。決済処理、在庫管理、注文追跡などの機能を実装しています。",
-    "thumbnail": "/images/projects/ecommerce-thumb.png",
-    "images": ["/images/projects/ecommerce-1.png", "/images/projects/ecommerce-2.png"],
-    "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "AWS"],
-    "githubUrl": "https://github.com/yourusername/ecommerce",
-    "liveUrl": "https://example.com",
+    "title": "AI会話履歴機能（フルサイクル開発）",
+    "description": "要件定義から実装までリード。GPT-4o/5統合、API呼び出し66%削減を実現",
+    "longDescription": "EdTech企業のAI学習支援サービスにおいて、会話履歴機能を0から企画・設計・実装。ステークホルダーヒアリング、仕様書作成、DB設計、API設計を担当し、5エンドポイント・3テーブル設計を完遂。カーソルベースページネーションやGoogle Cloud Storage統合により、フロントエンド実装負担を70%削減。",
+    "thumbnail": "/images/projects/ai-conversation-thumb.png",
+    "technologies": [
+      "NestJS",
+      "TypeScript",
+      "OpenAI GPT-4o",
+      "OpenAI GPT-5 nano",
+      "Google Cloud Storage",
+      "Prisma",
+      "MySQL",
+      "Jest"
+    ],
     "featured": true,
-    "completedDate": "2024-03",
+    "completedDate": "2025-12",
     "metrics": {
-      "users": "10,000+",
-      "performance": "95+ Lighthouse",
-      "uptime": "99.9%"
+      "codeLines": "4,373行実装",
+      "tests": "165テストケース",
+      "apiReduction": "66%削減"
     }
   },
   {
     "id": "project-2",
-    "title": "タスク管理アプリ",
-    "description": "チーム向けのリアルタイム協業タスク管理ツール",
-    "longDescription": "リアルタイムでタスクの進捗を共有できるチーム向けアプリケーションです。WebSocketを使用したリアルタイム更新機能を実装しています。",
-    "thumbnail": "/images/projects/taskapp-thumb.png",
-    "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
-    "githubUrl": "https://github.com/yourusername/task-app",
+    "title": "フルマネージドサービスを介したバッチ処理基盤の0→1構築",
+    "description": "7ヶ月間単独でプロジェクトをリード。デプロイ時間83%削減、完全自動化を実現",
+    "longDescription": "Cloud Run Functions/Jobsを活用したサーバーレスバッチ処理基盤を0から立ち上げ。NestJS Standalone Applicationの採用、Terraformによるインフラコード化、GitHub Actionsでのクロスリポジトリ自動化を実装。5フェーズの段階的改善により、デプロイ時間を30分から5分へ83%削減。",
+    "thumbnail": "/images/projects/faas-platform-thumb.png",
+    "technologies": [
+      "Cloud Run Functions",
+      "Cloud Run Jobs",
+      "NestJS",
+      "Terraform",
+      "GitHub Actions",
+      "TypeScript",
+      "Prisma"
+    ],
     "featured": true,
-    "completedDate": "2024-01"
+    "completedDate": "2025-11",
+    "metrics": {
+      "codeLines": "29,392行実装",
+      "tests": "373テストケース",
+      "deploymentReduction": "83%削減"
+    }
   },
   {
     "id": "project-3",
-    "title": "ポートフォリオビルダー",
-    "description": "開発者向けポートフォリオ自動生成ツール",
-    "thumbnail": "/images/projects/portfolio-builder-thumb.png",
-    "technologies": ["Next.js", "TypeScript", "GitHub API"],
-    "githubUrl": "https://github.com/yourusername/portfolio-builder",
+    "title": "技術スタック統一プロジェクト",
+    "description": "ScalaからTypeScript（NestJS）への段階的マイグレーション。API Gateway統合、無停止移行を実現",
+    "longDescription": "manabo2プロジェクトの技術スタック統一において、ScalaサービスからTypeScript（NestJS）ベースのマイクロサービスへの段階的マイグレーションを推進。API Gateway統合設計、NestJSルーティングアーキテクチャの最適化、本番環境への無停止移行戦略の実装を担当。組織管理機能群のAPI移行、ルーティング競合問題の解決、徹底したローカル検証により、ゼロダウンタイムでの移行を完遂。",
+    "thumbnail": "/images/projects/scala-ts-migration-thumb.png",
+    "technologies": [
+      "TypeScript",
+      "NestJS",
+      "Scala",
+      "Go",
+      "API Gateway",
+      "Prisma",
+      "MySQL"
+    ],
+    "featured": true,
+    "completedDate": "2025-12",
+    "metrics": {
+      "migration": "段階的マイグレーション",
+      "integration": "API Gateway統合",
+      "downtime": "ゼロダウンタイム"
+    }
+  },
+  {
+    "id": "project-5",
+    "title": "UX改善チュートリアル機能（離脱率20%削減）",
+    "description": "Driver.js導入によりユーザーオンボーディングを改善、応募率10%向上を実現",
+    "longDescription": "求人紹介サイトのレジュメ登録プロセスにおいて、高い離脱率という課題をデータ分析から特定。Driver.jsを用いたインタラクティブチュートリアルを実装し、Google Analyticsで離脱箇所を可視化。結果として離脱率20%削減、応募率10%向上、サポート問い合わせ40%削減を達成。",
+    "thumbnail": "/images/projects/tutorial-feature-thumb.png",
+    "technologies": [
+      "JavaScript",
+      "Driver.js",
+      "PHP",
+      "Kohana Framework",
+      "jQuery",
+      "Google Analytics 4"
+    ],
+    "featured": true,
+    "completedDate": "2022-06",
+    "metrics": {
+      "dropoffReduction": "20%削減",
+      "conversionIncrease": "10%向上",
+      "supportReduction": "40%削減"
+    }
+  },
+  {
+    "id": "project-6",
+    "title": "セキュリティライブラリ導入",
+    "description": "Helmet.js、Throttler等を導入し、XSS・CSRF・レート制限対策を実装",
+    "longDescription": "マイクロサービスのセキュリティレベルを向上。Helmet.jsでセキュリティヘッダー設定、ThrottlerでAPIレート制限、Dependabotで依存パッケージの脆弱性監視を実装。",
+    "thumbnail": "/images/projects/security-enhancement-thumb.png",
+    "technologies": [
+      "Helmet.js",
+      "NestJS Throttler",
+      "Dependabot",
+      "NestJS"
+    ],
     "featured": false,
-    "completedDate": "2023-12"
+    "completedDate": "2025-09",
+    "metrics": {
+      "libraries": "3つのライブラリ導入"
+    }
+  },
+  {
+    "id": "project-7",
+    "title": "CI/CDテスト自動化とカバレッジ管理",
+    "description": "GitHub Actions CI/CD構築、レビュー時間90%削減",
+    "longDescription": "GitHub ActionsによるCI/CD環境を構築。カバレッジ閾値（Lines 85%, Branches 80%）を設定し、PR毎に品質を自動チェック。開発者全員の効率向上に貢献。",
+    "thumbnail": "/images/projects/ci-automation-thumb.png",
+    "technologies": [
+      "GitHub Actions",
+      "Jest",
+      "NestJS",
+      "TypeScript"
+    ],
+    "featured": false,
+    "completedDate": "2025-08",
+    "metrics": {
+      "reviewTimeReduction": "90%削減",
+      "coverageThreshold": "Lines 85%, Branches 80%"
+    }
   }
 ]
