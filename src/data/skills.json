@@ -48,6 +48,7 @@
         { "name": "Terraform", "level": 4, "yearsExp": 1.5 },
         { "name": "GitHub Actions", "level": 4, "yearsExp": 1.5 },
         { "name": "Docker", "level": 4, "yearsExp": 4.8 },
+        { "name": "Kubernetes", "level": 3, "yearsExp": 1.5 },
         { "name": "Jenkins", "level": 3, "yearsExp": 3.2 },
         { "name": "Git", "level": 5, "yearsExp": 4.8 }
       ]
