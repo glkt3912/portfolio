@@ -19,8 +19,8 @@ export const SECTION_STYLES = {
 
   // パディング・背景
   padding: {
-    light: 'py-20 bg-white dark:bg-gray-950',
-    dark: 'py-20 bg-gray-50 dark:bg-gray-900',
+    subtle: 'py-20 bg-cyan-50 dark:bg-gray-950',   // 淡いcyan背景
+    medium: 'py-20 bg-cyan-100 dark:bg-gray-900',  // 中間cyan背景
   },
 } as const;
 
