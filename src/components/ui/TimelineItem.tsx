@@ -1,9 +1,31 @@
-import { Text, Badge, Group, List } from '@mantine/core';
+import { Text, Badge, Group } from '@mantine/core';
 import { WorkHistory } from '@/types';
 
 interface TimelineItemProps {
   work: WorkHistory;
 }
+
+// メトリクスを抽出する関数
+const extractMetrics = (text: string): string[] => {
+  const metrics: string[] = [];
+
+  // パターン1: "XX%削減" のような形式
+  const percentagePattern = /(\d+%[^\s、。）]*)/g;
+  const percentages = text.match(percentagePattern);
+  if (percentages) metrics.push(...percentages);
+
+  // パターン2: "X,XXX行" のような形式
+  const linesPattern = /(\d{1,3}(?:,\d{3})*行[^\s、。）]*)/g;
+  const lines = text.match(linesPattern);
+  if (lines) metrics.push(...lines);
+
+  // パターン3: "XXXテスト" のような形式
+  const testsPattern = /(\d+テスト[^\s、。）]*)/g;
+  const tests = text.match(testsPattern);
+  if (tests) metrics.push(...tests);
+
+  return metrics;
+};
 
 export default function TimelineItem({ work }: TimelineItemProps) {
   const formatPeriod = (start: string, end: string | 'present') => {
@@ -39,14 +61,35 @@ export default function TimelineItem({ work }: TimelineItemProps) {
       </Text>
 
       <div className="mb-3">
-        <Text size="sm" fw={500} className="mb-2 text-neutral-900 dark:text-neutral-100">
+        <Text size="sm" fw={500} className="mb-3 text-neutral-900 dark:text-neutral-100">
           主な実績:
         </Text>
-        <List size="sm" spacing="xs" className="text-neutral-700 dark:text-neutral-300">
-          {work.achievements.map((achievement, index) => (
-            <List.Item key={index}>{achievement}</List.Item>
-          ))}
-        </List>
+        <div className="space-y-4">
+          {work.achievements.map((achievement, index) => {
+            const metrics = extractMetrics(achievement);
+            return (
+              <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border-l-4 border-accent-500">
+                <Text size="sm" className="text-neutral-800 dark:text-neutral-200 mb-2 leading-relaxed">
+                  {achievement}
+                </Text>
+                {metrics.length > 0 && (
+                  <Group gap="xs" className="mt-2">
+                    {metrics.map((metric, idx) => (
+                      <Badge
+                        key={idx}
+                        size="sm"
+                        variant="filled"
+                        className="bg-accent-500 dark:bg-accent-600 text-white font-semibold"
+                      >
+                        {metric}
+                      </Badge>
+                    ))}
+                  </Group>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <Group gap="xs">
