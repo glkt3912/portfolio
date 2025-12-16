@@ -19,8 +19,8 @@ export default function TimelineItem({ work }: TimelineItemProps) {
   };
 
   return (
-    <div className="relative pl-8 pb-8 border-l-2 border-blue-500 dark:border-blue-400 last:pb-0">
-      <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-500 dark:bg-blue-400"></div>
+    <div className="relative pl-8 pb-8 border-l-2 border-accent-500 dark:border-accent-400 last:pb-0">
+      <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-accent-500 dark:bg-accent-400"></div>
 
       <div className="mb-2">
         <Text fw={600} size="lg" className="text-neutral-900 dark:text-neutral-100">
@@ -44,8 +44,8 @@ export default function TimelineItem({ work }: TimelineItemProps) {
         </Text>
         <div className="space-y-4">
           {work.achievements.map((achievement, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border-l-4 border-accent-500">
-              <Text size="sm" className="text-neutral-800 dark:text-neutral-200 leading-relaxed">
+            <div key={index} className="bg-white dark:bg-gray-700 rounded-lg p-4 border-l-4 border-accent-500 dark:border-accent-400">
+              <Text size="sm" className="text-neutral-800 dark:text-neutral-100 leading-relaxed">
                 {achievement}
               </Text>
             </div>

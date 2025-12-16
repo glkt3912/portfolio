@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { DarkModeProvider } from '@/hooks/useDarkMode';
+import { DarkModeProvider, useDarkMode } from '@/hooks/useDarkMode';
 import { theme } from '@/theme/mantineTheme';
 import '../styles/globals.css';
 import '@mantine/core/styles.css';
@@ -18,7 +18,17 @@ const queryClient = new QueryClient({
   },
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+function AppContent({ Component, pageProps }: AppProps) {
+  const { isDark } = useDarkMode();
+
+  return (
+    <MantineProvider theme={theme} forceColorScheme={isDark ? 'dark' : 'light'}>
+      <Component {...pageProps} />
+    </MantineProvider>
+  );
+}
+
+export default function App(props: AppProps) {
   return (
     <DarkModeProvider>
       <Head>
@@ -51,9 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <QueryClientProvider client={queryClient}>
-        <MantineProvider theme={theme}>
-          <Component {...pageProps} />
-        </MantineProvider>
+        <AppContent {...props} />
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </DarkModeProvider>

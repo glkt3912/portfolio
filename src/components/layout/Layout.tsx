@@ -12,7 +12,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col">
       <ScrollProgress />
       <Header />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow bg-white dark:bg-gray-900">{children}</main>
       <Footer />
     </div>
   );

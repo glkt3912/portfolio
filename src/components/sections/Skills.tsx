@@ -9,7 +9,7 @@ interface SkillsProps {
 export default function Skills({ skills }: SkillsProps) {
   return (
     <section id="skills" className={SECTION_STYLES.padding.subtle}>
-      <div className={SECTION_STYLES.container}>
+      <div className={`${SECTION_STYLES.container} py-8`}>
         <Title order={2} className={SECTION_STYLES.title}>
           技術スタック
         </Title>
@@ -23,11 +23,11 @@ export default function Skills({ skills }: SkillsProps) {
               >
                 {category.name}
               </Title>
-              <div className="flex flex-wrap gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-md"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-md"
                   >
                     <Text
                       size="sm"

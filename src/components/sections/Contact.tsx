@@ -110,7 +110,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className={SECTION_STYLES.padding.medium}>
+    <section id="contact" className={`${SECTION_STYLES.padding.medium} mb-16`}>
       <div className="container mx-auto px-4 max-w-2xl">
         <Title order={2} className={`${SECTION_STYLES.title} mb-4`}>
           お問い合わせ

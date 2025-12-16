@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800"
+      className="relative min-h-[600px] py-24 flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800"
     >
       {/* Subtle Grid Pattern */}
       <div

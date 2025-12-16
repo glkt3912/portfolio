@@ -31,7 +31,7 @@ export default function WhatICanDo() {
 
   return (
     <section id="what-i-can-do" className={SECTION_STYLES.padding.subtle}>
-      <div className={SECTION_STYLES.container}>
+      <div className={`${SECTION_STYLES.container} py-8`}>
         <Title
           order={2}
           className={SECTION_STYLES.title}
