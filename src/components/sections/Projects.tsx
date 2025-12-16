@@ -11,7 +11,7 @@ export default function Projects({ projects }: ProjectsProps) {
   const featuredProjects = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className={SECTION_STYLES.padding.dark}>
+    <section id="projects" className={SECTION_STYLES.padding.subtle}>
       <div className={SECTION_STYLES.container}>
         <Title order={2} className={SECTION_STYLES.title}>
           プロジェクト
